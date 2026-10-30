@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CatalogoCursosApp.Views.InicioPage"
+             Title="Inicio">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24,28" Spacing="18">
+
+            <Label Text="Catálogo de Cursos"
+                   Style="{StaticResource Headline}" />
+
+            <Label Text="Bienvenido. Explora los cursos disponibles, revisa sus detalles y edítalos cuando lo necesites."
+                   Style="{StaticResource SubHeadline}"
+                   HorizontalOptions="Start"
+                   HorizontalTextAlignment="Start" />
+
+            <Border Style="{StaticResource TarjetaCurso}" Margin="0,10,0,0">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="📚  Pestaña &quot;Cursos&quot;" Style="{StaticResource TituloCurso}" />
+                    <Label Text="Consulta la lista completa de cursos y entra al detalle de cada uno."
+                           Style="{StaticResource SubtituloCurso}" />
+                </VerticalStackLayout>
+            </Border>
+
+            <Border Style="{StaticResource TarjetaCurso}">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="👤  Pestaña &quot;Perfil&quot;" Style="{StaticResource TituloCurso}" />
+                    <Label Text="Consulta tu información de usuario."
+                           Style="{StaticResource SubtituloCurso}" />
+                </VerticalStackLayout>
+            </Border>
+
+            <Border Style="{StaticResource TarjetaCurso}">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="☰  Menú lateral" Style="{StaticResource TituloCurso}" />
+                    <Label Text="Abre el menú lateral para ver &quot;Acerca de&quot; o salir de la aplicación."
+                           Style="{StaticResource SubtituloCurso}" />
+                </VerticalStackLayout>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

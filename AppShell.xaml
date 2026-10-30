@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:CatalogoCursosApp.Views"
+       x:Class="CatalogoCursosApp.AppShell"
+       FlyoutBehavior="Flyout"
+       Title="CatalogoCursosApp">
+
+    <!-- Pestañas inferiores: Inicio, Cursos y Perfil -->
+    <TabBar>
+        <ShellContent Title="Inicio"
+                      Route="InicioPage"
+                      ContentTemplate="{DataTemplate views:InicioPage}" />
+
+        <ShellContent Title="Cursos"
+                      Route="CursosPage"
+                      ContentTemplate="{DataTemplate views:CursosPage}" />
+
+        <ShellContent Title="Perfil"
+                      Route="PerfilPage"
+                      ContentTemplate="{DataTemplate views:PerfilPage}" />
+    </TabBar>
+
+    <!-- Menú lateral (Flyout): Acerca de -->
+    <FlyoutItem Title="Acerca de">  
+        <ShellContent Route="AcercaDePage"
+                      ContentTemplate="{DataTemplate views:AcercaDePage}" />
+    </FlyoutItem>
+
+    <!-- MenuItem del flyout: Salir -->
+    <MenuItem Text="Salir"
+              Clicked="OnSalirClicked" />
+
+</Shell>

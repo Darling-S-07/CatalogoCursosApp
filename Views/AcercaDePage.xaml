@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CatalogoCursosApp.Views.AcercaDePage"
+             Title="Acerca de">
+
+    <VerticalStackLayout Padding="24,28" Spacing="18">
+
+        <Label Text="Catálogo de Cursos" Style="{StaticResource Headline}" />
+
+        <Border Style="{StaticResource TarjetaCurso}">
+            <VerticalStackLayout Spacing="10">
+                <Label Text="Aplicación de ejemplo hecha con .NET MAUI y Shell."
+                       Style="{StaticResource SubtituloCurso}" />
+                <Label Text="Versión 1.0" Style="{StaticResource TituloCurso}" FontSize="15" />
+            </VerticalStackLayout>
+        </Border>
+
+    </VerticalStackLayout>
+
+</ContentPage>

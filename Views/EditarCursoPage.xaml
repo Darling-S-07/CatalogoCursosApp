@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CatalogoCursosApp.Views.EditarCursoPage"
+             Title="Editar curso">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24,28" Spacing="16">
+
+            <Label Text="Editar curso" Style="{StaticResource Headline}" />
+
+            <Border Style="{StaticResource TarjetaCurso}">
+                <VerticalStackLayout Spacing="14">
+
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Título" Style="{StaticResource SubtituloCurso}" />
+                        <Entry x:Name="EntryTitulo" />
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Descripción" Style="{StaticResource SubtituloCurso}" />
+                        <Entry x:Name="EntryDescripcion" />
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Instructor" Style="{StaticResource SubtituloCurso}" />
+                        <Entry x:Name="EntryInstructor" />
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Duración (horas)" Style="{StaticResource SubtituloCurso}" />
+                        <Entry x:Name="EntryDuracion" Keyboard="Numeric" />
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Categoría" Style="{StaticResource SubtituloCurso}" />
+                        <Entry x:Name="EntryCategoria" />
+                    </VerticalStackLayout>
+
+                </VerticalStackLayout>
+            </Border>
+
+            <Button Text="Guardar"
+                    Style="{StaticResource BotonPrimario}"
+                    HorizontalOptions="Fill"
+                    Clicked="OnGuardarClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

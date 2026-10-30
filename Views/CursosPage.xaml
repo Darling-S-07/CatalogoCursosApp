@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:CatalogoCursosApp.Models"
+             x:Class="CatalogoCursosApp.Views.CursosPage"
+             Title="Cursos">
+
+    <CollectionView x:Name="ListaCursos"
+                     Margin="20,16">
+        <CollectionView.ItemsLayout>
+            <LinearItemsLayout Orientation="Vertical" ItemSpacing="14" />
+        </CollectionView.ItemsLayout>
+        <CollectionView.ItemTemplate>
+            <DataTemplate x:DataType="models:Curso">
+                <Border Style="{StaticResource TarjetaCurso}">
+                    <Grid ColumnDefinitions="*,Auto" ColumnSpacing="12">
+
+                        <VerticalStackLayout Grid.Column="0" Spacing="4" VerticalOptions="Center">
+                            <Label Text="{Binding Titulo}" Style="{StaticResource TituloCurso}" />
+                            <Label Text="{Binding Instructor}" Style="{StaticResource SubtituloCurso}" />
+                            <Label Text="{Binding Categoria}" Style="{StaticResource EtiquetaCategoria}" />
+                        </VerticalStackLayout>
+
+                        <Button Grid.Column="1"
+                                Text="Ver detalle"
+                                Style="{StaticResource BotonPrimario}"
+                                VerticalOptions="Center"
+                                Clicked="OnVerDetalleClicked"
+                                CommandParameter="{Binding Id}" />
+                    </Grid>
+                </Border>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+
+</ContentPage>
