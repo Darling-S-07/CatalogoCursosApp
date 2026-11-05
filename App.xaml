@@ -4,7 +4,10 @@
              x:Class="CatalogoCursosApp.App">
     <Application.Resources>
         <ResourceDictionary>
-            <!-- Aquí se agregarán luego los ResourceDictionary de estilos -->
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
